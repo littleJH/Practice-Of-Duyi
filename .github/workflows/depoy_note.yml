@@ -31,10 +31,10 @@ jobs:
       #       ${{ runner.OS }}-node-
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm --filter "@frontend/note" install
 
       - name: Build project
-        run: pnpm run docs:build
+        run: pnpm --filter "@frontend/note" build
 
       - name: Upload artifact
         uses: actions/upload-artifact@v2
@@ -51,7 +51,7 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: build-files
-          path: docs/.vitepress/dist/
+          path: note_build
 
       - name: Copy files via SSH
         uses: appleboy/scp-action@master
