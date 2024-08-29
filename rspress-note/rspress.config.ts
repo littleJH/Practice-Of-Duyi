@@ -6,7 +6,7 @@ export default defineConfig({
   title: 'frontend-note of jiahe',
   description: 'Rspack-based Static Site Generator',
   icon: '/rspress-icon.png',
-  outDir: path.resolve(__dirname, 'note_build'),
+  outDir: path.resolve(__dirname, '../note_build'),
   logo: {
     light: '/rspress-light-logo.png',
     dark: '/rspress-dark-logo.png',
