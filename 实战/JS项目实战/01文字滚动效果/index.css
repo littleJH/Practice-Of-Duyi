@@ -1,0 +1,45 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100vw;
+  height: 5rem;
+  display: flex;
+  background-color:aquamarine;
+  font-size: 3rem;
+  padding: 2rem;
+}
+
+.left {
+  min-width: fit-content;
+  text-align: center;
+  margin-right: 5rem;
+}
+
+.left::after {
+  content: '|';
+  margin-left: 3rem;
+  height: 1rem;
+  width: 1rem;
+  background-color: rgb(0, 0, 0);
+}
+
+.right {
+  overflow: hidden;
+}
+
+.right ul {
+  height: 1.5rem;
+}
+
+.right li {
+  height: 100%;
+  list-style:decimal-leading-zero;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}

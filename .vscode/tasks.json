@@ -1,0 +1,27 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Create Project Structure",
+      "type": "shell",
+      "command": "node",
+      "args": [
+        "create-structure.js",
+        "${input:targetDirectory}"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    }
+  ],
+  "inputs": [
+    {
+      "id": "targetDirectory",
+      "type": "promptString",
+      "description": "Enter the target directory for project structure",
+      "default": "${workspaceFolder}"
+    }
+  ]
+}

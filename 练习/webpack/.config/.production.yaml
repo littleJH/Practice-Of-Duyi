@@ -1,0 +1,3 @@
+WEBPACK_CONFIG:
+  mode: production
+  devtool: source-map

@@ -1,0 +1,13 @@
+.foo-baz {
+  color: red;
+}
+.bar {
+  color: blue;
+}
+.default {
+  color: green;
+}
+
+body {
+  background: url('../../assets/image.jpg');
+}

@@ -1,0 +1,19 @@
+{
+  "name": "webpack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode development",
+    "dev:server": "webpack-dev-server  --mode development",
+    "build": "webpack --mode production",
+    "babel": "babel src/babel-test.js --out-file dist/babel-test.js",
+    "dll": "webpack --config webpack.dll.config.js",
+    "split": "webpack --config webpack.split.config.js",
+    "split:server": "webpack-dev-server --config webpack.split.config.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {}
+}

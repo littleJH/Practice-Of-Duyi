@@ -1,0 +1,5 @@
+packages: 
+  - "练习/*"
+  - "手写"
+  - "实战/**"
+  - "rspress-note"
