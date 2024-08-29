@@ -17,6 +17,11 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v3 # docs https://pnpm.io/continuous-integration#github-actions
+        with:
+          version: 9.7.1 # Optional: specify a pnpm version
+
       # - name: Cache dependencies
       #   uses: actions/cache@v3
       #   with:
