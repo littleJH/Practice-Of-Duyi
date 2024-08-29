@@ -2,26 +2,28 @@
 pageType: home
 
 hero:
-  name: frontend-note of jiahe
-  text: Rspack-based Static Site Generator
-  tagline: frontend-note of jiahe tagline
+  name: 嘉禾的个人网站
+  # text: Rspack-based Static Site Generator
+  tagline: jiahe's personal website
   actions:
     - theme: brand
-      text: Quick Start
-      link: /guide/
+      text: 开始
+      link: /渡一高薪课/开始
     - theme: alt
       text: GitHub
-      link: https://github.com/web-infra-dev/rspress
+      link: https://github.com/littleJH
   image:
     src: /rspress-icon.png
     alt: frontend-note of jiahe Logo
 features:
-  - title: Blazing fast build speed
+  - title: React 渲染原理
     details: The core compilation module is based on the Rust front-end toolchain, providing a more ultimate development experience.
     icon: 🏃🏻‍♀️
-  - title: Support for MDX content writing
+    link: /渡一高薪课/前端框架/React/React 就业/React 高阶/07 React 渲染流程
+  - title: Webpack 构建流程和性能优化
     details: MDX is a powerful way to write content, allowing you to use React components in Markdown.
     icon: 📦
+    link: /渡一高薪课/工程化/Webpack
   - title: Built-in full-text search
     details: Automatically generates a full-text search index for you during construction, providing out-of-the-box full-text search capabilities.
     icon: 🎨

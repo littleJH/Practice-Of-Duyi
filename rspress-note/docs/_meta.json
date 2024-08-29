@@ -1,11 +1,11 @@
 [
   {
-    "text": "duyi",
-    "link": "/渡一高薪课/开始",
-    "activeMatch": "/渡一高薪课/开始"
+    "text": "React 渲染原理",
+    "link": "/渡一高薪课/前端框架/React/React 就业/React 高阶/07 React 渲染流程"
   },
   {
-    "text": "API",
-    "link": "https://rspress.dev/api/index.html"
+    "text": "Webpack",
+    "link": "/渡一高薪课/工程化/Webpack",
+    "activeMatch": "/渡一高薪课/工程化/Webpack"
   }
 ]
