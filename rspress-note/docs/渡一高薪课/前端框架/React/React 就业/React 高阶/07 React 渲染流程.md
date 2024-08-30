@@ -18,7 +18,7 @@
 
 React 的渲染流程分为两大阶段和三大模块
 
-<img src="https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2023-02-23-101849.png" alt="image-20230223181848783" style="zoom:33%;" />	
+![image-20230223181848783](https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2023-02-23-101849.png)	
 
 **两大阶段**
 
@@ -108,7 +108,7 @@ channel.port2.postMessage('111')
 
    注意，`switch (priorityLevel)` 根据优先级设置 *expirationTime* 过期时间时，当 `priorityLevel === ImmediatePriority` 时，此时过期时间比当前时间还小，表明要立即执行
 
-   <img src="https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2022-12-29-065931.png" alt="image-20221229145930771" style="zoom:50%;" />	
+   ![image-20221229145930771](https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2022-12-29-065931.png)	
 
 3. 执行任务
 
