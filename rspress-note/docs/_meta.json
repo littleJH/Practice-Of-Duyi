@@ -7,5 +7,10 @@
     "text": "Webpack",
     "link": "/渡一高薪课/工程化/Webpack",
     "activeMatch": "/渡一高薪课/工程化/Webpack"
+  },
+  {
+    "text": "rspress官网",
+    "link": "https://rspress.dev/zh/guide/start/introduction",
+    "activeMatch": "https://rspress.dev/zh/guide/start/introduction"
   }
 ]
