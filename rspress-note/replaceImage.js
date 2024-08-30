@@ -1,3 +1,7 @@
+/**
+ * 替换当前文件夹下所有 .md 文件中所有 <img /> 标签为 Markdown 语法中的 ![]() 格式
+ */
+
 const fs = require('fs');
 const path = require('path');
 
