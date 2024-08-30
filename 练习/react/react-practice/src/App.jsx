@@ -15,11 +15,18 @@ function App() {
     fetch()
   }, [fetch])
 
+  const handleInput = () => {
+    console.log('input ...')
+  }
 
+  const handleInputCapture = () => {
+    console.log('input capture ...')
+  }
 
   return (
     <ErrorBoundary>
-      <button onClick={() => setCount(val => val + 1)}>count + 1</button>
+      <button onClick={() => setCount(val => val + 1)}>{count} + 1</button>
+      <input onInput={handleInput} onChange={handleInput} onInputCapture={handleInputCapture} onChangeCapture={handleInputCapture}></input>
     </ErrorBoundary>
   )
 }

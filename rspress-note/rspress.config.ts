@@ -1,5 +1,6 @@
 import * as path from 'path'
 import { defineConfig } from 'rspress/config'
+import fileTree from 'rspress-plugin-file-tree'
 
 export default defineConfig({
   root: path.join(__dirname, 'docs'),
@@ -11,6 +12,11 @@ export default defineConfig({
     light: '/logo.jpg',
     dark: '/logo.jpg',
   },
+  plugins: [
+    fileTree({
+      initialExpandDepth: 1,
+    }),
+  ],
   themeConfig: {
     socialLinks: [
       {
