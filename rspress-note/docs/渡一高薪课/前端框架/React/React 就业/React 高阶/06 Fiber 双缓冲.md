@@ -51,8 +51,8 @@ function FiberNode () {
 
   this.pendingProps = pendingProps;
   this.memoizedProps = null;
-  this.updateQueue = null;
-  this.memoizedState = null;
+  this.updateQueue = null;	// 副作用
+  this.memoizedState = null; 	// 类组件保存 state，函数组件保存 hooks，DOM 为 null
   this.dependencies = null;
 
   this.mode = mode;
