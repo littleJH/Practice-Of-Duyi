@@ -8,7 +8,8 @@ if (!targetDir) {
   process.exit(1);
 }
 
-
+process.env.OSS_ACCESS_KEY_ID = 'LTAI5tJh5Zdgj86XVxZTm6iG'
+process.env.OSS_ACCESS_KEY_SECRET = 'A0CnEYfXAbrJ8wQ9qCiC9EnPkZNtVB'
 
 const client = new OSS({
   // yourregion填写Bucket所在地域。以华东1（杭州）为例，Region填写为oss-cn-hangzhou。
@@ -72,17 +73,21 @@ fs.readFile(jsonFilePath, 'utf-8', async (err, data) => {
   const jsonData = JSON.parse(data);
   console.log("🚀 ~ fs.readFileSync ~ jsonData:", jsonData)
 
-  const urls = []
+  const urls = {}
   for (const key in jsonData) {
     if (Object.hasOwnProperty.call(jsonData, key)) {
       const requestUrls = await put(jsonData[key])
-      urls.push({
-        [key]: requestUrls[0]
-      })
+      urls[key] = requestUrls[0]
     }
   }
 
-  console.log("🚀 ~ fs.readFileSync ~ urls:", urls)
+  fs.writeFile(path.resolve(__dirname, "uploadResultMap" + '.json'), JSON.stringify(urls), (err) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    console.log('The file has been saved!');
+  })
 })
 
 
