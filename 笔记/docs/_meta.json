@@ -1,12 +1,12 @@
 [
   {
     "text": "React",
-    "link": "/渡一高薪课/前端框架/React/React 就业/React 高阶/07 React 渲染流程"
+    "link": "/前端笔记/React/React 就业/React 高阶/07 React 渲染流程"
   },
   {
     "text": "Webpack",
-    "link": "/渡一高薪课/工程化/Webpack",
-    "activeMatch": "/渡一高薪课/工程化/Webpack"
+    "link": "/前端笔记/工程化/Webpack",
+    "activeMatch": "/前端笔记/工程化/Webpack"
   },
   {
     "text": "rspress官网",
