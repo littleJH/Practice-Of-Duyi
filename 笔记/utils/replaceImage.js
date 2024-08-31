@@ -7,6 +7,7 @@ const fs = require('fs');
 const path = require('path');
 
 const mode = process.argv[2];
+const jsonFilePath = process.argv[3];
 if (!mode) {
   console.log('请输入参数，1为替换图片格式，2为替换图片链接')
   return
@@ -30,17 +31,23 @@ function replaceImageLink(content, jsonFilePath) {
 
   // 使用replace方法替换匹配的图片链接为新链接
   const replacedString = content.replace(regex, (match, url) => {
-    let newLink
-
-    const json = JSON.parse(fs.readFileSync(jsonFilePath, 'utf8'));
-    for (const key in json) {
-      if (Object.prototype.hasOwnProperty.call(json, key)) {
-        if (json[key] === match) {
-          newLink = json[key]
+    try {
+      let newLink
+      const json = JSON.parse(fs.readFileSync(jsonFilePath, 'utf8'));
+      for (const key in json) {
+        if (Object.prototype.hasOwnProperty.call(json, key)) {
+          if (match.includes([key])) {
+            newLink = json[key]
+            console.log("🚀 ~ replacedString ~ newLink:", newLink)
+          }
         }
       }
+      // return `![${path.basename(newLink)}](${newLink})`;
+
+      return newLink ? `![${path.basename(newLink).replace(/\.(png)|(jpg)|(.jpeg)/, '')}](${newLink})` : match
+    } catch (error) {
+      console.log("🚀 ~ replacedString ~ error:", error)
     }
-    return `![${path.basename(newLink)}](${newLink})`;
   });
 
   return replacedString;
@@ -48,6 +55,7 @@ function replaceImageLink(content, jsonFilePath) {
 
 // Function to process files in the directory
 function processDirectory(dir, jsonFilePath) {
+  if (dir.includes('node_modules')) return
   fs.readdir(dir, (err, files) => {
     if (err) {
       console.error(`Error reading directory: ${err}`);
@@ -65,7 +73,7 @@ function processDirectory(dir, jsonFilePath) {
 
         if (stats.isDirectory()) {
           // Recursively process subdirectories
-          processDirectory(filePath);
+          processDirectory(filePath, jsonFilePath);
         } else if (path.extname(file) === '.md' || path.extname(file) === '.mdx') {
           // Process markdown files
           fs.readFile(filePath, 'utf8', (err, data) => {
@@ -103,8 +111,8 @@ function processDirectory(dir, jsonFilePath) {
 }
 
 
+
 if (mode == "2") {
-  const jsonFilePath = process.argv[3];
   if (!jsonFilePath) {
     console.log('请输入新旧链接的json文件路径')
     return
