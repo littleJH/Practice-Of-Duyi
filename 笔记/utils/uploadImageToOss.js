@@ -8,8 +8,6 @@ if (!targetDir) {
   process.exit(1);
 }
 
-process.env.OSS_ACCESS_KEY_ID = 'LTAI5tJh5Zdgj86XVxZTm6iG'
-process.env.OSS_ACCESS_KEY_SECRET = 'A0CnEYfXAbrJ8wQ9qCiC9EnPkZNtVB'
 
 const client = new OSS({
   // yourregion填写Bucket所在地域。以华东1（杭州）为例，Region填写为oss-cn-hangzhou。
