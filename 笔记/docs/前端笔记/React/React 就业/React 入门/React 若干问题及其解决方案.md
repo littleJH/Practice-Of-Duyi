@@ -96,9 +96,9 @@ MyComponent.defaultProps {
 
 [github: prop-types](https://github.com/facebook/prop-types)
 
-![image-20240819141024370](https://raw.githubusercontent.com/littleJH/PicBed/main/img/image-20240819141024370.png)	
+![image-20240819141024370](http://jiahe-picbed.oss-cn-shenzhen.aliyuncs.com/typora-image/image-20240819141024370.png)	
 
-![image-20240819141241520](https://raw.githubusercontent.com/littleJH/PicBed/main/img/image-20240819141241520.png)	
+![image-20240819141241520](http://jiahe-picbed.oss-cn-shenzhen.aliyuncs.com/typora-image/image-20240819141241520.png)	
 
 
 

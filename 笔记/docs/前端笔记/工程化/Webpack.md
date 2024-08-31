@@ -86,7 +86,7 @@
 
 注意：以上整个构建过程在每个 `chunk` 中都会同样地执行
 
-![image-20240814201450079](https://raw.githubusercontent.com/littleJH/PicBed/main/img/image-20240814201450079.png)	
+![image-20240814201450079](http://jiahe-picbed.oss-cn-shenzhen.aliyuncs.com/typora-image/image-20240814201450079.png)	
 
 
 
@@ -98,7 +98,7 @@
 
 注意：最终生成的资源可能不止一个文件，例如配置了 `devtool: source-map`，就会另外生成一个`xxx.map.js`文件
 
-​	![](https://raw.githubusercontent.com/littleJH/PicBed/main/img/image-20240814201932832.png)
+​	![image-20240814201932832](http://jiahe-picbed.oss-cn-shenzhen.aliyuncs.com/typora-image/image-20240814201932832.png)
 
 
 
@@ -106,7 +106,7 @@
 
 将所有 `chunk assets` 合并，这是最重要输出到 `output` 配置的目录中的文件资源，同时会生成一个总的 `hash`
 
-![](https://raw.githubusercontent.com/littleJH/PicBed/main/img/image-20240814202429136.png)	
+![image-20240814202429136](http://jiahe-picbed.oss-cn-shenzhen.aliyuncs.com/typora-image/image-20240814202429136.png)	
 
 
 
@@ -116,7 +116,7 @@
 
 通过 nodejs 的 fs 模块写入文件
 
-![](https://raw.githubusercontent.com/littleJH/PicBed/main/img/image-20240814202703268.png)	
+![image-20240814202703268](http://jiahe-picbed.oss-cn-shenzhen.aliyuncs.com/typora-image/image-20240814202703268.png)	
 
 
 
@@ -126,7 +126,7 @@
 
 总过程
 
-![](https://raw.githubusercontent.com/littleJH/PicBed/main/img/image-20240814201251288.png)
+![image-20240814201251288](http://jiahe-picbed.oss-cn-shenzhen.aliyuncs.com/typora-image/image-20240814201251288.png)
 
 
 
@@ -228,7 +228,7 @@
 
 **处理 loaders 流程：**
 
-![](https://raw.githubusercontent.com/littleJH/PicBed/main/img/image-20240814205718147.png)	
+![image-20240814205718147](http://jiahe-picbed.oss-cn-shenzhen.aliyuncs.com/typora-image/image-20240814205718147.png)	
 
 
 
@@ -365,7 +365,7 @@
 
   
 
-  ![](https://raw.githubusercontent.com/littleJH/PicBed/main/img/image-20240815104444002.png)	
+  ![image-20240815104444002](http://jiahe-picbed.oss-cn-shenzhen.aliyuncs.com/typora-image/image-20240815104444002.png)	
 
   
 

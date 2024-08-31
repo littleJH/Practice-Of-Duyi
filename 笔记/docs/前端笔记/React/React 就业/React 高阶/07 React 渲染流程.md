@@ -18,7 +18,7 @@
 
 React 的渲染流程分为两大阶段和三大模块
 
-![image-20230223181848783](https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2023-02-23-101849.png)	
+![2023-02-23-101849](http://jiahe-picbed.oss-cn-shenzhen.aliyuncs.com/typora-image/2023-02-23-101849.png)	
 
 **两大阶段**
 
@@ -108,7 +108,7 @@ channel.port2.postMessage('111')
 
    注意，`switch (priorityLevel)` 根据优先级设置 *expirationTime* 过期时间时，当 `priorityLevel === ImmediatePriority` 时，此时过期时间比当前时间还小，表明要立即执行
 
-   ![image-20221229145930771](https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2022-12-29-065931.png)	
+   ![2022-12-29-065931](http://jiahe-picbed.oss-cn-shenzhen.aliyuncs.com/typora-image/2022-12-29-065931.png)	
 
 3. 执行任务
 
@@ -604,7 +604,7 @@ function performUnitOfWork (unitFiber) {
 
 递归过程图示
 
-![递归过程图示](https://raw.githubusercontent.com/littleJH/PicBed/main/img/image-20240829162719155.png) 
+![image-20240829162719155](http://jiahe-picbed.oss-cn-shenzhen.aliyuncs.com/typora-image/image-20240829162719155.png) 
 
 
 
@@ -674,7 +674,7 @@ function performUnitOfWork (unitFiber) {
 
 *beginWork* 方法图示
 
-![image-20240829162823969](https://raw.githubusercontent.com/littleJH/PicBed/main/img/image-20240829162823969.png)
+![image-20240829162823969](http://jiahe-picbed.oss-cn-shenzhen.aliyuncs.com/typora-image/image-20240829162823969.png)
 
 
 
@@ -881,7 +881,7 @@ function diffProperties(domElement, tag, lastRawProps, nextRawProps, rootContain
 
 *completeWork* 方法图示
 
-![image-20240829164203640](https://raw.githubusercontent.com/littleJH/PicBed/main/img/image-20240829164203640.png)
+![image-20240829164203640](http://jiahe-picbed.oss-cn-shenzhen.aliyuncs.com/typora-image/image-20240829164203640.png)
 
 
 
@@ -893,7 +893,7 @@ function diffProperties(domElement, tag, lastRawProps, nextRawProps, rootContain
 
 
 
-![image-20240829190937624](https://raw.githubusercontent.com/littleJH/PicBed/main/img/image-20240829190937624.png)
+![image-20240829190937624](http://jiahe-picbed.oss-cn-shenzhen.aliyuncs.com/typora-image/image-20240829190937624.png)
 
 
 

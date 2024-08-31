@@ -183,7 +183,7 @@ function App() {
 }
 ```
 
-![image-20240830214913413](https://raw.githubusercontent.com/littleJH/PicBed/main/img/image-20240830214913413.png)
+![image-20240830214913413](http://jiahe-picbed.oss-cn-shenzhen.aliyuncs.com/typora-image/image-20240830214913413.png)
 
 
 

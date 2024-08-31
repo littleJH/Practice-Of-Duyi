@@ -99,7 +99,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(<App></App>)
 
 形成如下效果：
 
-![image-20230224151515483](https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2023-02-24-071516.png)	
+![2023-02-24-071516](http://jiahe-picbed.oss-cn-shenzhen.aliyuncs.com/typora-image/2023-02-24-071516.png)	
 
 **第二步：处理 current tree 和 workInProgress tree**
 
@@ -109,13 +109,13 @@ ReactDOM.createRoot(document.getElementById('root')).render(<App></App>)
 
 2. 然后进入 *workLoop* 流程。*workLoop* 会对每个 fiber 调用 *beginWork* 方法，这个方法会从 *HostRootFiber* 开始进行**深度优先**遍历，根据传入的 FiberNode 创建下一级 FiberNode。
 
-   ![image-20230224152421236](https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2023-02-24-072421.png)	
+   ![2023-02-24-072421](http://jiahe-picbed.oss-cn-shenzhen.aliyuncs.com/typora-image/2023-02-24-072421.png)	
 
 3. 遍历结束后生成 workInProgress  tree。此时意味着 *render* 阶段结束，进入 *commit* 阶段。将构建好的 workInProgress tree 交给 renderer（渲染器）进行 UI 的渲染
 
 4. 在 *commit*  的过程中，FiberRoot 的 *current* 会指向 workInProgress tree，作为当前渲染的 current  tree，完成双缓冲的工作
 
-   ![image-20230224152953358](https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2023-02-24-072953.png)	
+   ![2023-02-24-072953](http://jiahe-picbed.oss-cn-shenzhen.aliyuncs.com/typora-image/2023-02-24-072953.png)	
 
 ### update 阶段
 
@@ -123,7 +123,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(<App></App>)
 
 当 workInProgress tree 生成完毕后，就会进入 *commit* 阶段，FiberRoot 的 *current* 会指向 workInProgress tree，作为当前渲染的 current  tree，完成双缓冲的工作。
 
-![image-20230224153638862](https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2023-02-24-073639.png)	
+![2023-02-24-073639](http://jiahe-picbed.oss-cn-shenzhen.aliyuncs.com/typora-image/2023-02-24-073639.png)	
 
 当再次发生更新时，会直接将 current tree 复制一份当作 workInProgress tree 进行更新。
 
