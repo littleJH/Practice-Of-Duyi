@@ -7,13 +7,16 @@ function App() {
 
   const [count, setCount] = useState(1)
 
-  const fetch = useCallback(() => {
-    console.log('fetch ...')
-  }, [])
+  if (count % 2 === 0) {
+    useEffect(() => {
+      window.alert('useEffect in 2')
+    })
+  } else {
+    useEffect(() => {
+      window.alert('useEffect in 1')
+    })
+  }
 
-  useEffect(() => {
-    fetch()
-  }, [fetch])
 
   const handleInput = () => {
     console.log('input ...')
