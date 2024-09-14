@@ -1,7 +1,34 @@
 # Hooks 原理
 ---
 
-> 面试题：Hook是如何保存函数组件状态的？为什么不能在循环，条件或嵌套函数中调用 Hook ？
+> 面试题：
+>
+> 1. Hook 是如何保存函数组件状态的？为什么不能在循环，条件或嵌套函数中调用 Hook ？
+>
+> 2. useState 和 useReducer 有什么样的区别？
+> 3. 说一说 useEffect 和 useLayoutEffect 的区别？
+> 4. useCallback 和 useMemo 的区别是什么？
+> 5. useRef 是干什么的？ref 的工作流程是怎样的？什么叫做 ref 的失控？
+
+
+
+> 回答：
+>
+> 1. 
+
+
+
+
+
+> ![image-20240904104157758](https://jiahe-picbed.oss-cn-shenzhen.aliyuncs.com/typora-image/image-20240904104157758.png)
+
+
+
+> 回答：
+>
+> 1. 函数组件在执行
+
+
 
 
 
@@ -46,7 +73,7 @@
 
 在 FunctionComponent 进入到 render 阶段，在 *beginWork* 的执行中，匹配到 `workInProgress.tag === FcuntionComponent ` 时，会执行 *updateFunctionComponent* 方法。
 
-我们直到 *beginWork* 方法会根据传入的 FiberNode 创建下一级的 FIberNode。对于 FC，会先在 *renderWithHooks* 中执行我们写的 FC 函数组件，返回值交给 *reconcilerChildren* 去调和（diff）
+我们知道 *beginWork* 方法会根据传入的 FiberNode 创建下一级的 FIberNode。对于 FC，会先在 *renderWithHooks* 中执行我们写的 FC 函数组件，返回值交给 *reconcilerChildren* 去调和（diff）
 
 在 FC 函数组件的执行过程中，就会执行各种各样的 Hooks
 
@@ -85,7 +112,7 @@ export function renderWithHooks<Props, SecondArg>(
 
 
 
-### useState 举例
+### useState 和 useReducer
 
 ```jsx
 function () {
@@ -305,6 +332,30 @@ function updateWorkInProgressHook(): Hook {
 ```
 
 
+
+
+
+### effect 相关 hooks
+
+
+
+**useEffect**
+
+在 commit 阶段结束后 **异步执行**，不会阻塞视图渲染
+
+**useLayoutEffect**
+
+在 commit 阶段的 Layout 子阶段同步执行，可以拿到 DOM 实例从而操作 DOM
+
+**useInsertionEffect**
+
+
+
+### useCallback 和 useMemo
+
+
+
+### useRef
 
 
 

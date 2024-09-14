@@ -5,31 +5,24 @@ import Child07 from "./component/07 error boundary/Child07"
 
 function App() {
 
-  const [count, setCount] = useState(1)
+  const [isShow, setIsShow] = useState(false)
+  const inputRef = useRef(null)
 
-  if (count % 2 === 0) {
-    useEffect(() => {
-      window.alert('useEffect in 2')
-    })
-  } else {
-    useEffect(() => {
-      window.alert('useEffect in 1')
-    })
-  }
+  useEffect(() => {
+    console.log('App useEffect')
+    return () => {
+      console.log('App useEffect return')
+    }
+  }, [])
 
-
-  const handleInput = () => {
-    console.log('input ...')
-  }
-
-  const handleInputCapture = () => {
-    console.log('input capture ...')
-  }
 
   return (
     <ErrorBoundary>
-      <button onClick={() => setCount(val => val + 1)}>{count} + 1</button>
-      <input onInput={handleInput} onChange={handleInput} onInputCapture={handleInputCapture} onChangeCapture={handleInputCapture}></input>
+      <button onClick={() => setIsShow(!isShow)}>toggle</button>
+      <button onClick={() => inputRef.current.remove()}>remove</button>
+      {
+        isShow && <input ref={inputRef}></input>
+      }
     </ErrorBoundary>
   )
 }
